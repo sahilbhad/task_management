@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div class="home">
+    
+
+<a href="{% url 'Restoreall' %}">restore_all</a>  <br>
+<a href="{% url 'clear' %}">clear_all_</a>  
+<br>
+
+{% for i in b %}
+<div class="home_container"> 
+{{i.id}}
+{{i.title}}
+{{i.desc}} 
+<a href="{% url 'restore' i.id %}">restore</a> 
+<a href="{% url 'delet' i.id %}">delete</a> <br>
+</div>
+
+{% endfor %}
+</div>
+
+{% endblock content %}

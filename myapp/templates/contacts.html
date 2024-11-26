@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="home" >
+
+
+ 
+
+ 
+ 
+    <div class="addtask" >
+    <form action="" class="ff" method="POST">
+
+        {%  csrf_token %}
+        <label for="">{{TaskForm.fname.label}}</label>
+            {{TaskForm.fname}}<br>
+            <label for="">{{TaskForm.lname.label}}</label>
+            {{TaskForm.lname}}<br>
+            <label for="">{{TaskForm.email.label}}</label>
+            {{TaskForm.email}}<br>
+            <label for="">{{TaskForm.message.label}}</label>
+            {{TaskForm.message}}
+             
+        
+            <br>
+  
+    
+        <input type="submit">
+    </div>
+    </form>
+</div>    
+ 
+
+{% endblock content %}

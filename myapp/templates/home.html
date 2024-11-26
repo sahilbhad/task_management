@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home" >
+
+
+<h2><a href="{% url 'home'%}"> All Task</a> </h2>
+
+
+<form  class="ff">
+    <input type="text" name="search" placeholder="search here.....">
+    <input type="submit">
+</form>
+
+{% for i in a %}
+<div class="home_container">
+ Id:{{i.id}}//  
+ Title:{{i.title}}//  
+ Desc:{{i.desc}}
+
+<a href="{% url 'upd' i.id %}">update</a> <br>
+<a href="{% url 'dele' i.id %}">delete</a>
+<a href="{% url 'details' i.id %}">detail</a> <br>
+<a href="{% url 'comp' i.id %}">Task_complated</a> <br>
+</div>
+{% endfor %}
+{% if n %}
+  <h1>No Data Match </h1>
+  {% endif %}
+</div>
+
+
+{% endblock content %}

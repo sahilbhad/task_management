@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="home" >
+
+
+    
+<h2> Taskcomplated</h2>
+
+<a href="{% url 're_tc' %}">restore_all</a> <br>
+
+{% for i in a %}
+<div class="home_container">
+{{i.id}}
+{{i.title}}
+{{i.desc}} 
+ 
+<a href="{% url 'no_t' i.id %}">Not_complated</a>
+
+</div>
+{% endfor %}
+</div>
+
+{% endblock content %}

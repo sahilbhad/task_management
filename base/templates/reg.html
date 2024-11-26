@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home">
+<div class="addtask" >
+    <h1>Sign Up</h1>
+    {% if  username_ex %}
+
+        <h1>
+            username alredy exists Please Register
+        </h1>
+
+
+    {% endif %}
+<form action="" class="ff"  method="POST">
+    {% csrf_token %}
+    <label for="">USERNAME</label>
+    <input type="text" name="username" placeholder="Enter Username "> <br>
+    
+    <label for="">PASSWORD</label>
+    
+    <input type="password" name="password" placeholder="Enter Password"> <br>
+
+ 
+
+    <input type="submit" value="SUBMIT">
+</form>
+</div>
+</div>
+
+
+{% endblock content %}x

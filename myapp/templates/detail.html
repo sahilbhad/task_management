@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home">
+    <div class="home_container"> 
+
+    <h3>Id : {{a.id}}</h3>
+    <h3>title : {{a.title}}</h3>
+    <h3>description : {{a.desc}}</h3>
+
+    <div class="homelinks">
+        <a href="{% url 'upd' a.id %}">Edit</a>
+       
+        <a href="{% url 'dele' a.id %}">Delete</a>
+    </div>
+
+
+
+</div>
+
+
+</div>
+{% endblock content %}

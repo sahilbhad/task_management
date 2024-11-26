@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home">
+<div class="addtask" >
+
+<form action="" class="ff" method="POST">
+    {% csrf_token %}
+    <label for="">TITLE</label>
+    <input type="text" name="title" required value="{{a.title}}"> <br>
+
+    <label for="">DESCRIPTION</label>
+    <input type="text" name="desc" required value="{{a.desc}}"> <br>
+
+    <input type="submit" value="SUBMIT">
+</form>
+</div>
+</div>
+
+
+{% endblock content %}

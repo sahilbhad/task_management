@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="home">
+<div class="addtask" >
+    <h1>Sign In</h1>
+
+<form   class="ff" method="POST">
+      {% csrf_token %}
+    <label for="">USERNAME</label>
+    <input type="text" name="username"  placeholder="Enter Username"> <br>
+
+    <label for="">PASSWORD</label>
+
+    <input type="password" name="password"  placeholder="Enter Password"> <br>
+
+    <input type="submit" value="SUBMIT">
+
+ 
+</form>
+</div>
+</div>
+
+
+{% endblock content %}
